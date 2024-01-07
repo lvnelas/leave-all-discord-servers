@@ -17,9 +17,5 @@ for guild in guilds:
     if isowner:
         print(f'Você não pode sair do servidor {guild_name} pois é dono dele.')
     else:
-        wantto = str(input(f'Você deseja sair do servidor {guild_name}? '))
-        if wantto == '1':
-            x = requests.delete(f'https://discord.com/api/users/@me/guilds/{guild_id}', headers=headers)
-            print(f'Você saiu do servidor {guild_name}!')
-        else:
-            continue
+        x = requests.delete(f'https://discord.com/api/users/@me/guilds/{guild_id}', headers=headers)
+        print(f'Você saiu do servidor {guild_name}!')
